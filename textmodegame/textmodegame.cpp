@@ -1,20 +1,37 @@
-// textmodegame.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
-
+#include<stdio.h>
+#include<Windows.h>
+#include<conio.h>
+void gotoxy(int x, int y)
+{
+	COORD c = { x, y };
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
+}
+void erase_ship(int x, int y)
+{
+	gotoxy(x, y);
+	printf("       ");
+}
+void draw_ship(int x , int y)
+{
+	gotoxy(x, y);
+	printf(" <-0-> ");
+}
 int main()
 {
-    std::cout << "Hello World!\n";
+	char ch = ' ';
+	int x = 38, y = 20;
+	draw_ship(x, y);
+	do {
+		if (_kbhit())
+		{
+			ch = _getch();
+			if (ch == 'a' && x > 0 ) { erase_ship(x, y); draw_ship(--x, y); }
+			if (ch == 'd' && x < 80) { erase_ship(x, y); draw_ship(++x, y); }
+			if (ch == 'w' && y > 0 ) { erase_ship(x, y); draw_ship(x, --y); }
+			if (ch == 's' && y < 29) { erase_ship(x, y); draw_ship(x, ++y); }
+			fflush(stdin);
+		}
+		Sleep(100);
+	} while (ch != 'x');
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
