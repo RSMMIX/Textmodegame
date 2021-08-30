@@ -1,4 +1,4 @@
-#include<stdio.h>
+/*#include<stdio.h>
 #include<Windows.h>
 #include<conio.h>
 void gotoxy(int x, int y)
@@ -16,10 +16,19 @@ void draw_ship(int x , int y)
 	gotoxy(x, y);
 	printf(" <-0-> ");
 }
+void setcursor(bool visible)
+{
+	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_CURSOR_INFO lpCursor;
+	lpCursor.bVisible = visible;
+	lpCursor.dwSize = 20;
+	SetConsoleCursorInfo(console, &lpCursor);
+}
 int main()
 {
 	char ch = ' ';
 	int x = 38, y = 20;
+	setcursor(0);
 	draw_ship(x, y);
 	do {
 		if (_kbhit())
@@ -35,3 +44,4 @@ int main()
 	} while (ch != 'x');
 	return 0;
 }
+*/
