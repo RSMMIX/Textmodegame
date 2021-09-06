@@ -1,5 +1,5 @@
 ﻿#include<stdio.h>
-#include<windows.h>
+/*#include<windows.h>
 #include<conio.h>
 struct Bullet
 {
@@ -96,4 +96,4 @@ int main()
 		Sleep(100);
 	} while (ch != 'x');
 	return 0;
-}
+}*/
