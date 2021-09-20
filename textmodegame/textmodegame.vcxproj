@@ -141,7 +141,8 @@
   <ItemGroup>
     <ClCompile Include="Lab6.cpp" />
     <ClCompile Include="lab7.cpp" />
-    <ClCompile Include="textmodegame.cpp" />
+    <ClCompile Include="lab8.cpp" />
+    <ClCompile Include="lab5.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

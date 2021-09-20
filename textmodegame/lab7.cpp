@@ -35,6 +35,14 @@ char cursor(int x, int y)
 		return buf[0];
 
 }
+void setcursor(bool visible)
+{
+	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_CURSOR_INFO lpCursor;
+	lpCursor.bVisible = visible;
+	lpCursor.dwSize = 20;
+	SetConsoleCursorInfo(console, &lpCursor);
+}
 int main()
 {
 	srand(time(NULL));
@@ -43,6 +51,7 @@ int main()
 	int bx, by, i;
 	int bullet = 0;
 	int score = 0;
+	setcursor(0);
 	draw_ship(x, y);
 	for (int i = 0; i < 20; i++)
 	{

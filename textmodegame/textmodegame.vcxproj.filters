@@ -15,13 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="textmodegame.cpp">
+    <ClCompile Include="lab5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Lab6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="lab7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lab8.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
