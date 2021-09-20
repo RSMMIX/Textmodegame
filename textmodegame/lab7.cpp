@@ -1,4 +1,4 @@
-#include<stdio.h>
+/*#include<stdio.h>
 #include<windows.h>
 #include<time.h>
 #include<conio.h>
@@ -95,4 +95,4 @@ int main()
 		Sleep(100);
 	} while (ch != 'x');
 	return 0;
-}
+}*/
